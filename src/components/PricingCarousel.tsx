@@ -7,34 +7,38 @@ const plans = [
     id: 1,
     name: "Gratuito",
     description: "Explore a plataforma e teste as ferramentas de diário essenciais.",
-    price: "R$ 0",
-    period: "/mês",
-    features: ["Acesso Básico", "Registro de Trades (Limitado)", "Métricas Padrão", "Suporte Comunitário"]
+    price: "R$0",
+    period: "/sempre",
+    features: ["12 operações de teste vitalícias", "Diário de trades", "Check-in emocional diário"],
+    buttonText: "Começar grátis"
   },
   {
     id: 2,
     name: "Trader",
     description: "Ideal para traders iniciantes buscando construir consistência diária.",
-    price: "R$ 49,90",
+    price: "R$49",
     period: "/mês",
-    features: ["Diário de Trades Ilimitado", "Análise de Fuga de Plano", "Gestão de Risco", "Backtest Básico"]
+    features: ["Operações ilimitadas", "Diário completo de trades", "Analytics e análises de performance", "Backtest manual", "Relatório semanal com IA Coach", "Plano de trading pessoal"],
+    buttonText: "Assinar Trader"
   },
   {
     id: 3,
     name: "Pro",
     description: "O ecossistema completo para traders avançados de alta performance.",
-    price: "R$ 89,90",
+    price: "R$89",
     period: "/mês",
-    features: ["Métricas Institucionais", "Acesso Multiativos (Forex, B3)", "Travas de Segurança Emocional", "Motor de Backtest Sem Limites"],
-    isPopular: true
+    features: ["Tudo do plano Trader", "Grupos de accountability", "Times de 3 a 5 traders", "Ranking público de consistência", "Acesso antecipado a novidades"],
+    isPopular: true,
+    buttonText: "Começar agora"
   },
   {
     id: 4,
     name: "Mentor",
     description: "Gestão profunda para professores, salas de sinal ou mesas proprietárias.",
-    price: "R$ 197,00",
+    price: "R$199",
     period: "/mês",
-    features: ["Todas as features Pro", "Múltiplas Contas Conectadas", "Dashboard de Alunos/Clientes", "Exportação Auditável de Relatórios"]
+    features: ["Tudo do plano Pro", "Painel de gestão de alunos", "Convide alunos pelo email", "Veja o resumo dos seus alunos", "Feedback direto nas operações", "Acompanhe evolução semanal"],
+    buttonText: "Assinar Mentor"
   }
 ];
 
@@ -120,21 +124,17 @@ export default function PricingCarousel() {
                   </ul>
                 </div>
 
-                <button 
-                  className={`mt-8 w-full py-4 rounded-xl font-bold transition-all duration-300
+                <a 
+                  href="https://app.trada.app.br/register"
+                  className={`mt-8 w-full py-4 rounded-xl font-bold transition-all duration-300 block text-center
                     ${isCenter 
                       ? 'bg-caribbean text-rich-black hover:bg-meadow shadow-lg shadow-caribbean/20' 
                       : 'bg-basil text-flash-white hover:bg-bang-green'
                     }`}
-                  onClick={(e) => {
-                    if (isCenter) {
-                      e.stopPropagation();
-                      // Redirect logic here
-                    }
-                  }}
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  {isCenter ? 'Começar Agora' : 'Selecionar Plano'}
-                </button>
+                  {plan.buttonText}
+                </a>
               </div>
             </motion.div>
           );

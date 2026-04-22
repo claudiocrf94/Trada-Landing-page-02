@@ -7,31 +7,36 @@ const benefits = [
     title: "Operacional Definido",
     description: "Regras claras de entrada e saída. Chega de achismos. O sistema mapeia sua técnica de ponta a ponta.",
     icon: Target,
-    number: "01"
+    number: "01",
+    screenshot: "/screenshots/screenshot-operacao.png"
   },
   {
-    title: "Controle Emocional",
-    description: "Travas de segurança e métricas ao vivo para te blindar nos dias de fúria e ansiedade do mercado.",
+    title: "Equilíbrio Emocional",
+    description: "Check-in emocional diário, stop de perda automático e pausa obrigatória para te proteger nos dias de fúria e ansiedade do mercado.",
     icon: Activity,
-    number: "02"
+    number: "02",
+    screenshot: "/screenshots/screenshot-emocional.png"
   },
   {
     title: "Análises Completas",
     description: "Identifique fuga de plano, erros recorrentes e escale sua performance com dados institucionais.",
     icon: BarChart3,
-    number: "03"
+    number: "03",
+    screenshot: "/screenshots/screenshot-analytics.png"
   },
   {
     title: "Motor de Backtest",
     description: "Valide estratégias e otimize setups com a máquina de processamento de histórico e simulações.",
     icon: RotateCcw,
-    number: "04"
+    number: "04",
+    screenshot: "/screenshots/screenshot-backtest.png"
   },
   {
-    title: "Plano de Trade",
-    description: "Seu mapa de execução diária. Metas, limites e checklist direto no seu painel antes da primeira boleta.",
+    title: "Plano de Trading",
+    description: "Seu manual de regras pessoais. Defina limites e horários de operação e o sistema avisa quando você está saindo do plano.",
     icon: LayoutDashboard,
-    number: "05"
+    number: "05",
+    screenshot: "/screenshots/screenshot-plano.png"
   }
 ];
 
@@ -83,33 +88,48 @@ export default function FeaturesHorizontal() {
                 key={index} 
                 className="w-[90vw] md:w-[60vw] lg:w-[45vw] px-4 flex-shrink-0"
               >
-                <div className="group relative bg-pine/40 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-bang-green hover:border-caribbean transition-colors duration-500 overflow-hidden h-full">
+                <div className="group relative rounded-3xl border border-bang-green hover:border-caribbean transition-all duration-[400ms] ease h-[70vh] min-h-[420px] max-h-[600px] overflow-hidden flex flex-col justify-end p-8 md:p-12 hover:scale-[1.02]">
                   
-                  {/* Big Background Number */}
-                  <div className="absolute -right-10 -bottom-10 text-[10rem] md:text-[15rem] font-bold text-rich-black opacity-40 font-mono tracking-tighter pointer-events-none selection:bg-transparent">
-                    {benefit.number}
-                  </div>
+                  {/* Background Image Layer */}
+                  <div 
+                    className="absolute inset-0 bg-cover transition-all duration-[400ms] ease bg-top group-hover:bg-center z-0"
+                    style={{ backgroundImage: `url(${benefit.screenshot})` }}
+                  />
 
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-dark-green border border-fog flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(0,223,129,0.1)] group-hover:shadow-[0_0_25px_rgba(0,223,129,0.3)] transition-all duration-300">
-                      <Icon className="w-8 h-8 text-caribbean" />
+                  {/* Gradient Overlay */}
+                  <div 
+                    className="absolute inset-0 transition-opacity duration-[400ms] ease opacity-100 group-hover:opacity-80 z-0"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(0, 20, 10, 0.92) 0%, rgba(0, 20, 10, 0.75) 50%, rgba(0, 20, 10, 0.4) 100%)'
+                    }}
+                  />
+
+                  {/* Content - Bottom Left */}
+                  <div className="relative z-10 w-full max-w-lg">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-dark-green/90 backdrop-blur-md border border-fog flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(0,223,129,0.1)] group-hover:shadow-[0_0_25px_rgba(0,223,129,0.3)] transition-all duration-[400ms] ease">
+                      <Icon className="w-7 h-7 md:w-8 md:h-8 text-caribbean" />
                     </div>
                     
-                    <h3 className="text-3xl md:text-5xl font-semibold mb-6 text-flash-white">
+                    <h3 
+                      className="text-3xl md:text-5xl font-bold mb-4 text-white"
+                      style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
+                    >
                       {benefit.title}
                     </h3>
                     
-                    <p className="text-lg md:text-xl text-stone max-w-sm font-light leading-relaxed">
+                    <p 
+                      className="text-lg md:text-xl font-light leading-relaxed"
+                      style={{ color: 'rgba(255, 255, 255, 0.8)', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
+                    >
                       {benefit.description}
                     </p>
                   </div>
 
-                  {/* Corner Accent */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-caribbean opacity-10 blur-[50px] group-hover:opacity-30 transition-opacity duration-500 rounded-full translate-x-1/2 -translate-y-1/2" />
                 </div>
               </div>
             );
           })}
+          <div className="w-[10vw] md:w-[5vw] flex-shrink-0" />
         </motion.div>
       </div>
     </section>

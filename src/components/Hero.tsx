@@ -158,7 +158,7 @@ export default function Hero() {
       >
         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-dark-green bg-pine/30 backdrop-blur-md mb-8">
           <span className="w-2 h-2 rounded-full bg-caribbean animate-pulse" />
-          <span className="text-sm font-medium tracking-wide text-flash-white">Alta Frequência. Alta Precisão.</span>
+          <span className="text-sm font-medium tracking-wide text-flash-white">Consistência. Disciplina. Resultado.</span>
         </motion.div>
 
         <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight leading-[0.9]">
@@ -169,18 +169,18 @@ export default function Hero() {
         </motion.h1>
         
         <motion.p variants={itemVariants} className="text-lg md:text-xl text-stone max-w-2xl mx-auto mb-10 font-light">
-          O ecossistema definitivo para traders de <strong>B3, Forex e Ações</strong>. 
-          Performance de nível institucional, análises modulares e proteção de capital blindada.
+          O diário inteligente para traders de <strong>B3, Forex e Crypto</strong>. 
+          Organize suas operações, cuide do seu emocional e evolua com dados reais.
         </motion.p>
 
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="h-14 px-8 rounded-full bg-caribbean text-rich-black font-bold text-lg hover:bg-meadow transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,223,129,0.3)] flex items-center gap-2">
+          <a href="https://app.trada.app.br/register" className="h-14 px-8 rounded-full bg-caribbean text-rich-black font-bold text-lg hover:bg-meadow transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,223,129,0.3)] flex items-center justify-center gap-2">
             Acessar o Trada
             <ChevronRight className="w-5 h-5" />
-          </button>
-          <button className="h-14 px-8 rounded-full border border-pine text-flash-white font-semibold text-lg hover:bg-pine/50 backdrop-blur-sm transition-all duration-300">
+          </a>
+          <a href="#features" className="h-14 px-8 rounded-full border border-pine text-flash-white font-semibold text-lg hover:bg-pine/50 backdrop-blur-sm transition-all duration-300 flex items-center justify-center">
             Saiba Mais
-          </button>
+          </a>
         </motion.div>
       </motion.div>
     </div>

@@ -11,9 +11,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
             <img 
-              src="/logo.png" 
+              src="/logo-trada-new.png" 
               alt="Trada Logo" 
-              className="h-14 md:h-16 scale-125 origin-left w-auto object-contain mb-8"
+              className="h-[32px] w-auto object-contain scale-[2.5] md:scale-[3] origin-left mb-8"
             />
             <p className="text-stone text-sm max-w-sm mb-6 leading-relaxed">
               Sistema profissional de gestão e performance para operadores do mercado financeiro. Transforme dados em consistência métrica.
@@ -33,10 +33,10 @@ export default function Footer() {
           <div>
             <h4 className="text-flash-white font-bold mb-6">Plataforma</h4>
             <ul className="space-y-4 text-sm text-stone">
-              <li><a href="#" className="hover:text-caribbean transition-colors">Sistema de Backtest</a></li>
-              <li><a href="#" className="hover:text-caribbean transition-colors">Diário de Trading</a></li>
-              <li><a href="#" className="hover:text-caribbean transition-colors">Análises de Performance</a></li>
-              <li><a href="#" className="hover:text-caribbean transition-colors">Planos de Assinatura</a></li>
+              <li><a href="https://app.trada.app.br/backtest" className="hover:text-caribbean transition-colors">Sistema de Backtest</a></li>
+              <li><a href="https://app.trada.app.br/trades" className="hover:text-caribbean transition-colors">Diário de Trading</a></li>
+              <li><a href="https://app.trada.app.br/analytics" className="hover:text-caribbean transition-colors">Análises de Performance</a></li>
+              <li><a href="https://app.trada.app.br/planos" className="hover:text-caribbean transition-colors">Planos de Assinatura</a></li>
             </ul>
           </div>
 
@@ -46,7 +46,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-caribbean transition-colors">Central de Ajuda (FAQ)</a></li>
               <li><a href="#" className="hover:text-flash-white transition-colors">Termos de Uso</a></li>
               <li><a href="#" className="hover:text-flash-white transition-colors">Política de Privacidade</a></li>
-              <li><a href="#" className="hover:text-flash-white transition-colors">Contato</a></li>
+              <li><a href="mailto:contato@trada.app" className="hover:text-flash-white transition-colors">Contato</a></li>
             </ul>
           </div>
         </div>

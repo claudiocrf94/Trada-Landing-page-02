@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { TrendingUp, Users, Target, ShieldCheck } from 'lucide-react';
+import { Flag, Layers, Sparkles, ShieldCheck } from 'lucide-react';
 
 export default function SocialProof() {
   return (
@@ -11,7 +11,7 @@ export default function SocialProof() {
         
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-flash-white">
-            Resultados que Falam por Si
+            Números que Falam por Si
           </h2>
           <p className="text-stone text-lg max-w-2xl mx-auto">
             Traders que implementam o Trada eliminam até 80% das falhas operacionais por descontrole emocional em 30 dias.
@@ -19,69 +19,50 @@ export default function SocialProof() {
         </div>
 
         {/* Stats Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           <div className="bg-rich-black/50 border border-bang-green p-8 rounded-3xl backdrop-blur-sm">
-            <TrendingUp className="w-8 h-8 text-caribbean mb-4" />
-            <div className="text-4xl font-black text-flash-white mb-2">+42%</div>
-            <p className="text-stone text-sm">Aumento médio de assertividade no 1º mês monitorado.</p>
+            <Flag className="w-8 h-8 text-caribbean mb-4" />
+            <div className="text-3xl font-black text-flash-white mb-2">100% PT-BR</div>
+            <p className="text-stone text-sm">Primeiro diário profissional nativo para traders brasileiros</p>
           </div>
           
           <div className="bg-rich-black/50 border border-bang-green p-8 rounded-3xl backdrop-blur-sm">
-            <Target className="w-8 h-8 text-caribbean mb-4" />
-            <div className="text-4xl font-black text-flash-white mb-2">94%</div>
-            <p className="text-stone text-sm">De redução em execuções de Over-Trading identificadas.</p>
+            <Layers className="w-8 h-8 text-caribbean mb-4" />
+            <div className="text-3xl font-black text-flash-white mb-2">4 mercados</div>
+            <p className="text-stone text-sm">B3, Forex, Crypto e Ações em um só lugar</p>
           </div>
 
           <div className="bg-rich-black/50 border border-bang-green p-8 rounded-3xl backdrop-blur-sm">
-            <Users className="w-8 h-8 text-caribbean mb-4" />
-            <div className="text-4xl font-black text-flash-white mb-2">+10k</div>
-            <p className="text-stone text-sm">Contas e portfólios orquestrados ativamente.</p>
+            <Sparkles className="w-8 h-8 text-caribbean mb-4" />
+            <div className="text-3xl font-black text-flash-white mb-2">IA Coach</div>
+            <p className="text-stone text-sm">Relatório semanal personalizado gerado por inteligência artificial</p>
           </div>
 
-          <div className="bg-caribbean/10 border border-caribbean/30 p-8 rounded-3xl backdrop-blur-sm">
+          <div className="bg-rich-black/50 border border-bang-green p-8 rounded-3xl backdrop-blur-sm">
             <ShieldCheck className="w-8 h-8 text-caribbean mb-4" />
-            <div className="text-xl font-bold text-flash-white mb-2 mt-2">Tecnologia Validada</div>
-            <p className="text-mint text-sm">Algoritmo testado por traders prop e analistas CMT globais.</p>
+            <div className="text-3xl font-black text-flash-white mb-2">Plano de Trading</div>
+            <p className="text-stone text-sm">Defina suas regras e o sistema garante que você as siga</p>
           </div>
         </div>
 
-        {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              quote: "O Trada me forçou a ser profissional. As estatísticas de Fuga de Plano me mostraram que eu entregava 60% do meu lucro na hora errada do dia.",
-              name: "Marcelo F.",
-              role: "Trader de B3 (Índice)",
-              initials: "MF"
-            },
-            {
-              quote: "Achei que o Excel resolvia minha vida até ver o cruzamento de dados de setup vs. meu estado emocional. É um divisor de águas absurdo.",
-              name: "Eduardo S.",
-              role: "Forex & XAUUSD",
-              initials: "ES"
-            },
-            {
-              quote: "A possibilidade de visualizar todas as estatísticas dos meus alunos em tempo real otimizou minhas mentorias e cortou meu tempo de análise pela metade.",
-              name: "Camila T.",
-              role: "Mentora de Traders",
-              initials: "CT"
-            }
-          ].map((testimonial, idx) => (
-            <div key={idx} className="bg-pine/20 border border-pine p-8 rounded-3xl flex flex-col justify-between">
-              <p className="text-stone italic mb-8 leading-relaxed">
-                "{testimonial.quote}"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-basil flex items-center justify-center text-caribbean font-bold text-sm">
-                  {testimonial.initials}
-                </div>
-                <div>
-                  <h4 className="font-bold text-flash-white text-sm">{testimonial.name}</h4>
-                  <span className="text-xs text-mint uppercase tracking-wider">{testimonial.role}</span>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Testimonials Replacement CTA */}
+        <div className="flex flex-col items-center text-center mt-12 bg-pine/10 border border-pine/30 p-12 rounded-3xl backdrop-blur-sm relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-t from-caribbean/5 to-transparent pointer-events-none" />
+          
+          <h3 className="text-3xl md:text-4xl font-bold text-flash-white mb-4 relative z-10">
+            O que os traders dizem
+          </h3>
+          
+          <p className="font-serif italic text-xl md:text-2xl text-stone mb-10 max-w-xl relative z-10">
+            "Depoimentos reais em breve. Seja um dos primeiros a usar o Trada."
+          </p>
+
+          <a 
+            href="https://app.trada.app.br/register" 
+            className="relative z-10 h-14 px-10 rounded-full bg-caribbean text-rich-black font-bold text-lg hover:bg-meadow transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,223,129,0.3)] flex items-center justify-center"
+          >
+            Começar gratuitamente
+          </a>
         </div>
 
       </div>
