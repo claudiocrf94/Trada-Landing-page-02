@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rich-black: #04100D; /* Slightly adjusted to ensure deep dark visibility */
+  --color-dark-green: #032221;
+  --color-pine: #06302B;
+  --color-basil: #0B453A;
+  --color-forest: #095544;
+  --color-bang-green: #03624C;
+  --color-frog: #17876D;
+  --color-mint: #2FA98C;
+  --color-meadow: #2CC295;
+  --color-caribbean: #00DF81;
+  --color-flash-white: #F1F7F6;
+  --color-stone: #707D7D;
+  --color-pistachio: #AACBC4;
+  
+  --font-sans: 'Inter', ui-sans-serif, system-ui;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--color-rich-black);
+  color: var(--color-flash-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom utility for the outlined text effect seen in the TRADA logo */
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-flash-white);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+::selection {
+  background-color: var(--color-caribbean);
+  color: var(--color-rich-black);
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-rich-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-pine);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-caribbean);
+}
