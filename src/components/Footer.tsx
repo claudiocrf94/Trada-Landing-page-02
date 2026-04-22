@@ -19,7 +19,7 @@ export default function Footer() {
               Sistema profissional de gestão e performance para operadores do mercado financeiro. Transforme dados em consistência métrica.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-dark-green border border-pine flex items-center justify-center hover:bg-pine hover:border-caribbean transition-colors group">
+              <a href="https://www.instagram.com/trada.app/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-dark-green border border-pine flex items-center justify-center hover:bg-pine hover:border-caribbean transition-colors group">
                 <Instagram className="w-4 h-4 text-stone group-hover:text-caribbean transition-colors" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-dark-green border border-pine flex items-center justify-center hover:bg-pine hover:border-caribbean transition-colors group">
